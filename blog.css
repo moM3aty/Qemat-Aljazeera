@@ -1,0 +1,122 @@
+/* ============================================================
+ *  blog.css   —   المسار:  /blog.css
+ *  ستايلات إضافية للمدونة (بنفس هوية الموقع)
+ * ============================================================ */
+
+.page-hero{
+    background:linear-gradient(150deg,var(--ink,#1a0508),var(--maroon-deep,#3b0f14) 60%);
+    color:#fff;text-align:center;padding:80px 0 70px;position:relative;
+}
+.page-hero h1{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;margin-bottom:12px;color:#fff;}
+.page-hero p{color:#eadfd4;max-width:620px;margin:0 auto;}
+
+.blog-home{padding:80px 0;}
+.blog-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:28px;}
+.blog-card{
+    background:#fff;border-radius:18px;overflow:hidden;
+    box-shadow:0 20px 44px -24px rgba(59,15,20,.38);
+    display:flex;flex-direction:column;
+    transition:transform .3s ease, box-shadow .3s ease;
+}
+.blog-card:hover{transform:translateY(-6px);box-shadow:0 30px 56px -22px rgba(59,15,20,.5);}
+.blog-thumb{display:block;overflow:hidden;}
+.blog-thumb img{width:100%;aspect-ratio:16/10;object-fit:cover;transition:transform .45s ease;}
+.blog-card:hover .blog-thumb img{transform:scale(1.06);}
+.blog-body{padding:22px 22px 26px;display:flex;flex-direction:column;flex:1;}
+.blog-date{
+    display:inline-flex;align-items:center;gap:7px;font-size:.8rem;font-weight:700;
+    color:var(--gold,#d4af37);margin-bottom:10px;
+}
+.blog-body h3{font-size:1.1rem;font-weight:800;color:var(--maroon,#5c141c);margin-bottom:10px;line-height:1.6;}
+.blog-body h3 a:hover{color:var(--gold,#d4af37);}
+.blog-body p{color:var(--grey,#6b5f5a);font-size:.9rem;margin-bottom:16px;flex:1;}
+.blog-more{
+    align-self:flex-start;font-weight:700;font-size:.88rem;color:var(--maroon,#5c141c);
+    display:inline-flex;align-items:center;gap:8px;transition:gap .2s ease,color .2s ease;
+}
+.blog-more:hover{gap:13px;color:var(--gold,#d4af37);}
+.blog-all{text-align:center;margin-top:48px;}
+
+/* ===== صفحة المقال ===== */
+.single-post{padding:60px 0 40px;}
+.post-container{max-width:820px;}
+.breadcrumb{font-size:.85rem;color:var(--grey,#6b5f5a);margin-bottom:22px;}
+.breadcrumb a{color:var(--maroon,#5c141c);font-weight:700;}
+.breadcrumb a:hover{color:var(--gold,#d4af37);}
+.post-title{
+    font-size:clamp(1.6rem,3.6vw,2.3rem);font-weight:800;color:var(--maroon,#5c141c);
+    line-height:1.5;margin-bottom:16px;
+}
+.post-meta{display:flex;gap:22px;flex-wrap:wrap;color:var(--grey,#6b5f5a);font-size:.88rem;margin-bottom:26px;}
+.post-meta i{color:var(--gold,#d4af37);}
+.post-image{border-radius:18px;overflow:hidden;margin-bottom:30px;
+    box-shadow:0 24px 50px -24px rgba(59,15,20,.4);}
+.post-image img{width:100%;display:block;}
+.post-content{font-size:1.02rem;color:#3a2b27;line-height:2;}
+.post-content p{margin-bottom:18px;}
+.post-content h2,.post-content h3{color:var(--maroon,#5c141c);margin:26px 0 14px;font-weight:800;}
+.post-content ul,.post-content ol{margin:0 24px 18px 0;}
+.post-content img{max-width:100%;border-radius:14px;margin:14px 0;}
+.post-content a{color:var(--gold,#d4af37);font-weight:700;}
+
+.post-cta{
+    margin-top:44px;background:linear-gradient(150deg,var(--maroon-deep,#3b0f14),var(--ink,#1a0508));
+    color:#fff;border-radius:18px;padding:34px 26px;text-align:center;
+}
+.post-cta p{margin-bottom:20px;color:#eadfd4;font-weight:600;}
+/* ============================================================
+ *  ستايلات Rich Text من Quill (للأمام)
+ * ============================================================ */
+
+.post-content{
+    font-size:1.02rem;line-height:2;color:#3a2b27;
+    word-wrap:break-word;overflow-wrap:break-word;
+}
+.post-content p{margin-bottom:16px}
+.post-content h1,.post-content h2,.post-content h3,.post-content h4{
+    color:var(--maroon,#5c141c);font-weight:800;line-height:1.5;
+    margin:26px 0 14px;
+}
+.post-content h1{font-size:1.7rem}
+.post-content h2{font-size:1.4rem}
+.post-content h3{font-size:1.2rem}
+.post-content h4{font-size:1.05rem}
+
+.post-content ul,.post-content ol{margin:0 26px 18px 0;padding:0}
+.post-content li{margin-bottom:8px}
+.post-content li::marker{color:var(--gold,#d4af37)}
+
+.post-content blockquote{
+    border-inline-start:4px solid var(--gold,#d4af37);
+    background:#fdfaf4;padding:14px 20px;border-radius:10px;
+    color:#5c4c46;font-style:italic;margin:18px 0;
+}
+.post-content code{
+    background:#f2ece2;color:#a5271b;padding:3px 8px;border-radius:6px;
+    font-family:Consolas,monospace;font-size:.9em;direction:ltr;display:inline-block;
+}
+.post-content pre{
+    background:#1a0508;color:#f4e8dc;padding:16px 20px;border-radius:12px;
+    overflow-x:auto;margin:18px 0;direction:ltr;text-align:left;
+}
+.post-content pre code{background:transparent;color:inherit;padding:0}
+
+.post-content a{color:var(--gold,#d4af37);font-weight:700;text-decoration:underline}
+.post-content a:hover{color:var(--maroon,#5c141c)}
+
+.post-content img{max-width:100%;height:auto;border-radius:14px;margin:16px 0;
+    box-shadow:0 16px 36px -20px rgba(59,15,20,.4);}
+
+/* محاذاة Quill */
+.post-content .ql-align-center{text-align:center}
+.post-content .ql-align-right{text-align:right}
+.post-content .ql-align-justify{text-align:justify}
+.post-content .ql-align-left{text-align:left}
+
+/* أحجام Quill */
+.post-content .ql-size-small{font-size:.85em}
+.post-content .ql-size-large{font-size:1.4em}
+.post-content .ql-size-huge{font-size:2em}
+
+/* إخفاء عناصر Quill الخاصة بالمحرر */
+.post-content .ql-ui{display:none}

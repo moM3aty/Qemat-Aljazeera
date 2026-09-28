@@ -1,0 +1,392 @@
+/* ============================================================
+ *  admin/css/login.css   —   المسار:  /admin/css/login.css
+ *  صفحة تسجيل الدخول — Modern Premium
+ * ============================================================ */
+
+:root{
+    --ink:#1a0508;
+    --maroon-deep:#3b0f14;
+    --maroon:#5c141c;
+    --gold:#d4af37;
+    --gold-bright:#f0c75e;
+    --cream:#fbf6ee;
+    --grey:#6b5f5a;
+    --border:rgba(92,20,28,.12);
+    --font:'Cairo','Tahoma',sans-serif;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body.login-body{
+    font-family:var(--font);
+    color:var(--ink);
+    background:#f4efe6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+button{font-family:var(--font)}
+
+/* ==================== Shell ==================== */
+.login-shell{
+    display:grid;
+    grid-template-columns:1.05fr 1fr;
+    min-height:100vh;
+}
+
+/* ==================== الجهة اليمنى (Brand) ==================== */
+.login-brand{
+    position:relative;
+    overflow:hidden;
+    color:#fff;
+    padding:60px 60px;
+    display:flex;
+    align-items:center;
+    background:
+        radial-gradient(70% 100% at 0% 0%, rgba(212,175,55,.28), transparent 60%),
+        radial-gradient(70% 100% at 100% 40%, rgba(92,20,28,.85), transparent 65%),
+        linear-gradient(160deg, var(--ink) 0%, var(--maroon-deep) 55%, var(--maroon) 100%);
+}
+
+/* أشكال عائمة في الخلفية */
+.brand-shapes{position:absolute;inset:0;pointer-events:none}
+.shape{
+    position:absolute;border-radius:50%;
+    background:radial-gradient(circle, rgba(212,175,55,.22), transparent 70%);
+    animation:floatShape 14s ease-in-out infinite;
+}
+.shape-1{width:420px;height:420px;top:-100px;left:-120px;animation-delay:0s}
+.shape-2{width:300px;height:300px;bottom:-80px;right:-60px;animation-delay:3s;
+    background:radial-gradient(circle, rgba(240,199,94,.18), transparent 70%);}
+.shape-3{width:220px;height:220px;top:40%;right:20%;animation-delay:6s;
+    background:radial-gradient(circle, rgba(92,20,28,.35), transparent 70%);}
+
+@keyframes floatShape{
+    0%,100%{transform:translate(0,0) scale(1)}
+    50%{transform:translate(20px,-30px) scale(1.06)}
+}
+
+.brand-content{position:relative;z-index:2;max-width:520px;width:100%}
+
+.brand-logo{
+    display:inline-flex;align-items:center;gap:12px;
+    padding:10px 18px;border-radius:999px;
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(212,175,55,.3);
+    backdrop-filter:blur(8px);
+    margin-bottom:36px;
+}
+.brand-mark{
+    width:38px;height:38px;border-radius:11px;
+    background:linear-gradient(135deg, var(--gold-bright), var(--gold));
+    display:flex;align-items:center;justify-content:center;
+    color:#3b2400;font-size:1rem;flex-shrink:0;
+    box-shadow:0 10px 24px -8px rgba(212,175,55,.7);
+    animation:floatY 3.4s ease-in-out infinite;
+}
+@keyframes floatY{
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(-6px)}
+}
+.brand-name{font-weight:800;font-size:.95rem;color:#fff}
+
+.brand-title{
+    font-size:clamp(2rem, 4vw, 3rem);
+    font-weight:900;
+    line-height:1.25;
+    margin-bottom:18px;
+    letter-spacing:-.5px;
+}
+.brand-title .grad{
+    background:linear-gradient(135deg, var(--gold-bright), var(--gold));
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
+}
+
+.brand-desc{
+    color:#e5d6c9;
+    font-size:1rem;
+    line-height:1.9;
+    margin-bottom:38px;
+    max-width:440px;
+}
+
+/* ==================== كروت المميزات ==================== */
+.brand-features{
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    padding:0;
+    margin:0;
+}
+.brand-features li{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    padding:14px 16px;
+    border-radius:14px;
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.08);
+    backdrop-filter:blur(6px);
+    transition:transform .3s ease, background .3s ease, border-color .3s ease;
+}
+.brand-features li:hover{
+    transform:translateX(-6px);
+    background:rgba(255,255,255,.09);
+    border-color:rgba(212,175,55,.35);
+}
+
+.feature-icon{
+    width:44px;
+    height:44px;
+    flex:0 0 44px;
+    border-radius:12px;
+    background:linear-gradient(135deg, rgba(240,199,94,.22), rgba(212,175,55,.08));
+    border:1px solid rgba(212,175,55,.35);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--gold-bright);
+    font-size:1rem;
+}
+
+/* النص ياخد باقي المساحة */
+.brand-features li > div{
+    flex:1 1 auto;
+    min-width:0;
+    display:flex;
+    flex-direction:column;
+    gap:3px;
+}
+
+.brand-features strong{
+    display:block;
+    color:#fff;
+    font-weight:800;
+    font-size:.92rem;
+    line-height:1.35;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+.brand-features small{
+    display:block;
+    color:#bfae9f;
+    font-size:.78rem;
+    line-height:1.5;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+/* ==================== الفوتر (جوّه الـ Brand) ==================== */
+.brand-footer{
+    position:static;
+    margin-top:40px;
+    padding-top:20px;
+    border-top:1px solid rgba(255,255,255,.08);
+    color:#9b8a7d;
+    font-size:.8rem;
+}
+
+/* ==================== الجهة اليسرى (Form) ==================== */
+.login-form-side{
+    background:var(--cream);
+    display:flex;align-items:center;justify-content:center;
+    padding:60px 40px;
+    position:relative;
+}
+.login-form-side::before{
+    content:'';position:absolute;inset:0;
+    background:
+        radial-gradient(50% 60% at 100% 0%, rgba(212,175,55,.08), transparent 60%),
+        radial-gradient(50% 60% at 0% 100%, rgba(92,20,28,.05), transparent 60%);
+    pointer-events:none;
+}
+
+.form-wrap{
+    position:relative;z-index:2;
+    width:100%;max-width:420px;
+    animation:formRise .6s ease both;
+}
+@keyframes formRise{
+    from{opacity:0;transform:translateY(24px)}
+    to{opacity:1;transform:translateY(0)}
+}
+
+.form-head{margin-bottom:30px}
+.hello-badge{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:7px 16px;border-radius:999px;
+    background:rgba(212,175,55,.14);
+    color:#8a6c00;
+    font-size:.78rem;font-weight:800;
+    margin-bottom:16px;
+}
+.hello-badge i{color:var(--gold)}
+
+.form-head h2{
+    font-size:1.85rem;font-weight:900;
+    color:var(--maroon);
+    margin-bottom:8px;
+    letter-spacing:-.4px;
+}
+.form-head p{color:var(--grey);font-size:.9rem}
+
+/* Alert */
+.alert-inline{
+    display:flex;align-items:center;gap:10px;
+    background:#fdecec;color:#a5271b;
+    border:1px solid rgba(192,57,43,.2);
+    border-inline-start:4px solid #c0392b;
+    padding:12px 16px;border-radius:12px;
+    font-size:.85rem;font-weight:700;
+    margin-bottom:20px;
+    animation:shakeX .5s ease;
+}
+@keyframes shakeX{
+    0%,100%{transform:translateX(0)}
+    25%{transform:translateX(-6px)}
+    75%{transform:translateX(6px)}
+}
+
+/* Fields */
+.form-field{display:block;margin-bottom:18px}
+.field-label{
+    display:block;
+    font-size:.85rem;font-weight:800;
+    color:var(--maroon);
+    margin-bottom:8px;
+}
+
+.input-wrap{
+    position:relative;
+    display:flex;align-items:center;
+    background:#fff;
+    border:1.5px solid var(--border);
+    border-radius:14px;
+    transition:border-color .2s ease, box-shadow .2s ease, background .2s ease;
+}
+.input-wrap:focus-within{
+    border-color:var(--gold);
+    box-shadow:0 0 0 4px rgba(212,175,55,.15);
+    background:#fffefb;
+}
+.input-wrap > i{
+    position:absolute;
+    inset-inline-start:16px;
+    color:var(--gold);
+    font-size:.95rem;
+    pointer-events:none;
+    transition:transform .2s ease;
+}
+.input-wrap:focus-within > i{transform:scale(1.1)}
+
+.input-wrap input{
+    flex:1;
+    width:100%;
+    padding:15px 44px 15px 16px;
+    padding-inline-start:44px;
+    border:0;outline:0;background:transparent;
+    font-family:var(--font);
+    font-size:.95rem;
+    color:var(--ink);
+}
+.input-wrap input::placeholder{color:#b8aaa1}
+
+.toggle-pass{
+    position:absolute;
+    inset-inline-end:10px;
+    background:transparent;border:0;cursor:pointer;
+    width:34px;height:34px;border-radius:9px;
+    display:flex;align-items:center;justify-content:center;
+    color:var(--grey);font-size:.9rem;
+    transition:background .2s, color .2s;
+}
+.toggle-pass:hover{background:rgba(212,175,55,.14);color:var(--maroon)}
+
+/* Submit */
+.btn-submit{
+    width:100%;
+    display:flex;align-items:center;justify-content:center;gap:12px;
+    padding:16px 24px;
+    border:0;border-radius:14px;
+    background:linear-gradient(135deg, var(--gold-bright), var(--gold));
+    color:#3b2400;
+    font-weight:900;font-size:1rem;
+    cursor:pointer;
+    font-family:var(--font);
+    margin-top:8px;
+    box-shadow:0 16px 34px -12px rgba(212,175,55,.7);
+    transition:transform .18s ease, box-shadow .18s ease, filter .18s ease;
+    position:relative;
+    overflow:hidden;
+}
+.btn-submit:hover{
+    transform:translateY(-2px);
+    box-shadow:0 22px 40px -12px rgba(212,175,55,.85);
+    filter:brightness(1.05);
+}
+.btn-submit:active{transform:translateY(0)}
+.btn-submit i{transition:transform .25s ease}
+.btn-submit:hover i{transform:translateX(-5px)}
+
+/* Back */
+.back-site{
+    display:flex;align-items:center;justify-content:center;gap:8px;
+    margin-top:20px;
+    font-size:.85rem;font-weight:700;
+    color:var(--grey);
+    padding:10px;
+    border-radius:10px;
+    transition:color .2s, background .2s;
+}
+.back-site:hover{color:var(--maroon);background:rgba(212,175,55,.08)}
+
+/* Note */
+.form-note{
+    display:flex;align-items:center;justify-content:center;gap:8px;
+    margin-top:22px;padding-top:22px;
+    border-top:1px dashed var(--border);
+    color:#9b8c83;font-size:.78rem;font-weight:700;
+}
+.form-note i{color:var(--gold)}
+
+/* ==================== SweetAlert تنسيق ==================== */
+.swal2-popup{
+    font-family:var(--font) !important;
+    direction:rtl;
+    border-radius:18px !important;
+}
+.swal2-title{font-weight:800 !important;color:var(--maroon) !important}
+.swal2-confirm{
+    font-family:var(--font) !important;
+    font-weight:800 !important;
+    border-radius:999px !important;
+    padding:10px 28px !important;
+}
+
+/* ==================== Responsive ==================== */
+@media (max-width:980px){
+    .login-shell{grid-template-columns:1fr}
+    .login-brand{
+        padding:50px 30px 40px;
+        min-height:auto;
+    }
+    .brand-features{display:none}
+    .brand-title{font-size:1.9rem}
+    .brand-desc{font-size:.9rem;margin-bottom:22px}
+    .brand-footer{margin-top:30px;padding-top:16px;right:auto;left:auto}
+    .login-form-side{padding:40px 24px 60px}
+}
+
+@media (max-width:520px){
+    .login-brand{padding:40px 22px 30px}
+    .brand-title{font-size:1.6rem}
+    .form-head h2{font-size:1.55rem}
+    .input-wrap input{padding:14px 40px 14px 14px;padding-inline-start:40px}
+    .btn-submit{padding:14px 20px;font-size:.95rem}
+}

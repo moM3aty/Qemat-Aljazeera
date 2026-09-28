@@ -1,0 +1,74 @@
+{
+    "phone": "0548203757",
+    "services": [
+        {
+            "id": "s1",
+            "icon": "fa-campground",
+            "title": "تأجير بيوت شعر",
+            "desc": "بيوت شعر جميع المقاسات لكافة المناسبات والتجمعات، بتجهيز داخلي أنيق ومريح."
+        },
+        {
+            "id": "s2",
+            "icon": "fa-tent",
+            "title": "تأجير خيام",
+            "desc": "خيام جميع المقاسات تناسب الحفلات والمناسبات الخاصة والعامة على حد سواء."
+        },
+        {
+            "id": "s3",
+            "icon": "fa-rug",
+            "title": "تأجير فرش",
+            "desc": "فرش متنوع وأنيق يمنح المكان طابعاً دافئاً ومريحاً يليق بضيوفكم."
+        },
+        {
+            "id": "s4",
+            "icon": "fa-chair",
+            "title": "تأجير كراسي",
+            "desc": "كراسي بأعداد وأشكال تناسب مختلف المناسبات والتجمعات."
+        },
+        {
+            "id": "s5",
+            "icon": "fa-couch",
+            "title": "تأجير كنب مجالس (مركاز)",
+            "desc": "كنب مجالس مريح وفاخر لتجهيز جلسات ومجالس الضيوف بأناقة."
+        },
+        {
+            "id": "s6",
+            "icon": "fa-fire",
+            "title": "تأجير دفايات",
+            "desc": "دفايات فعّالة لتدفئة الخيام وبيوت الشعر في المناسبات الشتوية والمسائية."
+        },
+        {
+            "id": "s7",
+            "icon": "fa-lightbulb",
+            "title": "تأجير عقود لمبات وزينة",
+            "desc": "عقود إضاءة وزينة تضفي أجواءً احتفالية ودافئة على مناسبتكم."
+        }
+    ],
+    "gallery": [
+        "imgs\/img1.jpeg",
+        "imgs\/img2.jpeg",
+        "imgs\/img3.jpeg",
+        "imgs\/img4.jpeg",
+        "imgs\/img5.jpeg",
+        "imgs\/img6.jpeg",
+        "imgs\/img7.jpeg",
+        "imgs\/img8.jpeg",
+        "imgs\/img9.jpeg",
+        "imgs\/img10.jpeg",
+        "imgs\/img11.jpeg",
+        "imgs\/img12.jpeg",
+        "imgs\/img13.jpeg",
+        "imgs\/img14.jpeg",
+        "imgs\/img15.jpeg",
+        "imgs\/img16.jpeg",
+        "imgs\/img17.jpeg",
+        "imgs\/img18.jpeg",
+        "imgs\/img19.jpeg",
+        "imgs\/img20.jpeg",
+        "imgs\/img21.jpeg",
+        "imgs\/img22.jpeg",
+        "imgs\/img23.jpeg",
+        "imgs\/img24.jpeg",
+        "imgs\/img25.jpeg"
+    ]
+}
