@@ -10,9 +10,9 @@ if (session_status() === PHP_SESSION_NONE) {
 
 /* ===================== بيانات قاعدة البيانات ===================== */
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'qimah_site');   // اسم قاعدة البيانات
-define('DB_USER', 'root');         // مستخدم قاعدة البيانات
-define('DB_PASS', '');             // كلمة المرور
+define('DB_NAME', 'u439595347_qimah_site');   // اسم قاعدة البيانات
+define('DB_USER', 'u439595347_qimahAdmin');         // مستخدم قاعدة البيانات
+define('DB_PASS', 'c002X68X|A');             // كلمة المرور
 
 /* ===================== مجلد رفع الصور ===================== */
 define('UPLOAD_PATH', __DIR__ . '/uploads');
